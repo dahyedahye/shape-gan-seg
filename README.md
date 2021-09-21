@@ -7,4 +7,4 @@ via Generative Adversarial Networks**
 
 **Code will be available soon! :construction: :wrench: :woman_technologist:**
 
-<!-- [paper]()|[project webpage]() -->
+[paper]()|[project webpage](https://dahyedahye.github.io/shape-gan-seg/)

@@ -7,7 +7,7 @@ via Generative Adversarial Networks**
 
 [paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Kim_Unsupervised_Segmentation_Incorporating_Shape_Prior_via_Generative_Adversarial_Networks_ICCV_2021_paper.pdf)|[project webpage](https://dahyedahye.github.io/shape-gan-seg/)
 
-Currently, only the **segmentation with shape prior via GAN** part is available. The **full source code** will be released by **the end of October 2021**! :construction: :wrench: :woman_technologist:**
+Currently, only the **segmentation with shape prior via GAN** part is available. The **full source code** will be released by **the end of October 2021**! :construction: :wrench: :woman_technologist:
 
 ## Setup
 * The code is tested with Python 3.7-3.8.8 and PyTorch 1.6-1.9.1

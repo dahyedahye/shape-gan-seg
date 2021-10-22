@@ -1,6 +1,3 @@
----
-youtubeId: y4DsY0oOl6A
----
 ## Unsupervised Segmentation incorporating Shape Prior via Generative Adversarial Networks (ICCV 2021)
 
 ### Abstract

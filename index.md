@@ -1,3 +1,6 @@
+---
+youtubeId: y4DsY0oOl6A
+---
 ## Unsupervised Segmentation incorporating Shape Prior via Generative Adversarial Networks (ICCV 2021)
 
 ### Abstract
@@ -8,3 +11,4 @@ We present an image segmentation algorithm that is developed in an unsupervised 
 <object data="iccv2021_09869_poster_final.pdf" width="960" height="540" type='application/pdf'></object>
 
 ### Presentation Video
+{% include youtubePlayer.html id=page.youtubeId %}

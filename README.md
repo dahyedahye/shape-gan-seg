@@ -14,12 +14,13 @@ Currently, only the **segmentation with shape prior via GAN** part is available.
   
 ## Currently Available
 ### Source code to train segmentation with shape incorporation (Sec. 3.2. of the paper)
-* Run with script:
-```bash
+* The shell script `./scripts/train_shape_seg.sh` contains commands to train the segmentation network with shape incorporation.
+* We will be sharing the dataset used in the code soon (by Oct 2021).
+<!-- ```bash
 $ cd ./scripts
 $ chmod +x train_shape_seg.sh
 $ ./train_shape_seg.sh
-```
+``` -->
 
 ## Update Plan
 1. Source code to train intrinsic decomposition (by Oct 2021)

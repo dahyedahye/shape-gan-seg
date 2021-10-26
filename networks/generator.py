@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-# DoubleConv
 class DoubleConv(nn.Module):
     """Double conv block with conv + batch normalization + ReLU"""
     def __init__(self, in_channels, out_channels, down_stride=False):
@@ -21,7 +20,6 @@ class DoubleConv(nn.Module):
     def forward(self, x):
         return self.double_conv(x)
 
-# DoubleConvLast
 class UpscaleDoubleConv(nn.Module):
     """Upscale then double conv"""
     def __init__(self, in_channels, out_channels, mid_channels=None):
@@ -39,7 +37,6 @@ class UpscaleDoubleConv(nn.Module):
         x = self.up(x)
         return self.double_conv(x)
 
-# DownStride
 class DoubleConvDownStride(nn.Module):
     """Downscale with stride = 2 and double conv"""
 
@@ -52,7 +49,6 @@ class DoubleConvDownStride(nn.Module):
     def forward(self, x):
         return self.double_conv(x)
 
-# OutConv
 class OneConv(nn.Module):
     """Adjust depth by one convolution"""
     def __init__(self, in_channels, out_channels):

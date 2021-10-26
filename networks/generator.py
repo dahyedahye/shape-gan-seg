@@ -4,7 +4,7 @@ import torch.nn as nn
 class DoubleConv(nn.Module):
     """Double conv block with conv + batch normalization + ReLU"""
     def __init__(self, in_channels, out_channels, down_stride=False):
-        super().__init__()
+        super(DoubleConv, self).__init__()
         stride_size = 1
         if down_stride:
             stride_size = 2
@@ -22,7 +22,7 @@ class DoubleConv(nn.Module):
 class UpscaleDoubleConv(nn.Module):
     """Upscale then double conv"""
     def __init__(self, in_channels, out_channels, mid_channels=None):
-        super().__init__()
+        super(UpscaleDoubleConv, self).__init__()
         if not mid_channels:
             mid_channels = out_channels
         self.up = nn.Upsample(scale_factor=2, mode='nearest')
@@ -40,7 +40,7 @@ class DoubleConvDownStride(nn.Module):
     """Downscale with stride = 2 and double conv"""
 
     def __init__(self, in_channels, out_channels):
-        super().__init__()
+        super(DoubleConvDownStride, self).__init__()
         self.double_conv = nn.Sequential(
             DoubleConv(in_channels, out_channels, down_stride=True)
         )
@@ -51,7 +51,7 @@ class DoubleConvDownStride(nn.Module):
 class OneConv(nn.Module):
     """Adjust depth by one convolution"""
     def __init__(self, in_channels, out_channels):
-        super().__init__()
+        super(OneConv, self).__init__()
         self.one_conv = nn.Conv2d(in_channels, out_channels, kernel_size=1)
     
     def forward(self, x):

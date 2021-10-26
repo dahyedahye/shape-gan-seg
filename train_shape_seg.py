@@ -1,6 +1,6 @@
 """
-Codes for training unsupervised segmentation incorporating shape prior via GAN
-Optimized based on Mumford-Shah functional loss
+Codes for training unsupervised segmentation incorporating shape prior via GAN.
+Optimized based on Mumford-Shah functional & GAN loss in an adversarial way.
 """
 
 import datetime

@@ -21,16 +21,14 @@ class DoubleConv(nn.Module):
 
 class UpscaleDoubleConv(nn.Module):
     """Upscale then double conv"""
-    def __init__(self, in_channels, out_channels, mid_channels=None):
+    def __init__(self, in_channels, out_channels):
         super(UpscaleDoubleConv, self).__init__()
-        if not mid_channels:
-            mid_channels = out_channels
         self.up = nn.Upsample(scale_factor=2, mode='nearest')
         self.double_conv = nn.Sequential(
-            nn.Conv2d(in_channels, mid_channels, kernel_size=3, padding=1),
-            nn.BatchNorm2d(mid_channels),
+            nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1),
+            nn.BatchNorm2d(out_channels),
             nn.ReLU(inplace=True),
-            nn.Conv2d(mid_channels, out_channels, kernel_size=3, padding=1)
+            nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1)
             )
     def forward(self, x):
         x = self.up(x)

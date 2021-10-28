@@ -9,6 +9,9 @@ via Generative Adversarial Networks**
 
 Currently, only the **segmentation with shape prior via GAN** part is available. The **full source code** will be released by **the end of October 2021**! :construction: :wrench: :woman_technologist:
 
+## News
+* Codes for intrinsic decomposition has been uploaded. (29.10.2021)
+
 ## Setup
 * The code is tested with Python 3.7-3.8.8 and PyTorch 1.6-1.9.1
   
@@ -21,10 +24,12 @@ $ cd ./scripts
 $ chmod +x train_shape_seg.sh
 $ ./train_shape_seg.sh
 ``` -->
+### Source code to train intrinsic decomposition (Sec. 3.1. of the paper)
+* The shell script `./scripts/train_intrinsic.sh` contains commands to train the intrinsic decomposition network.
 
 ## Update Plan
-1. Source code to train intrinsic decomposition (by Oct 2021)
-2. LSUN dataset with pseudo labels for segmentation (by Oct 2021)
+1. LSUN dataset with pseudo labels for segmentation (by Oct 2021)
+2. Demo codes (by Oct 2021)
 3. Source code to construct LSUN dataset with pseudo labels for segmentation (by Oct 2021)
 4. Source code to create synthetic dataset (by Oct 2021)
 5. Supplementary material with experimental details & network architecture (by Oct 2021)

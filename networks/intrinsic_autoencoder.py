@@ -57,15 +57,16 @@ class EncoderResidualBlock(nn.Module):
 
 class DecoderResidualBlock(nn.Module):
     """Residual block with conv + batch normalization + LeakyReLU"""
-    def __init__(self, in_channels, out_channels, up_sample=False, normalize=True):
+    def __init__(self, in_channels, out_channels, up_sample=False):
         super(DecoderResidualBlock, self).__init__()
+
+        self.up_sample = up_sample
+
         self.act = nn.LeakyReLU(0.2, inplace=False)
         self.conv1 = conv3x3(in_channels, in_channels)
         self.bn1 = nn.BatchNorm2d(in_channels, 0.8)
-        self.conv2 = conv3x3(in_channels, out_channels)
-        self.bn2 = nn.BatchNorm2d(out_channels, 0.8)
-        self.up_sample = up_sample
-        self.normalize = normalize
+        conv2_pad = 1
+
         if self.up_sample:
             self.up_output = nn.Sequential(
                 nn.Upsample(scale_factor = 2, mode = 'nearest'),
@@ -73,6 +74,10 @@ class DecoderResidualBlock(nn.Module):
                 )
             self.up_identity = nn.Upsample(scale_factor = 2, mode = 'nearest')
             self.one_conv = conv1x1(in_channels, out_channels)
+            conv2_pad = 0
+
+        self.conv2 = conv3x3(in_channels, out_channels, stride=1, padding=conv2_pad)
+        self.bn2 = nn.BatchNorm2d(out_channels, 0.8)
     
     def forward(self, x):
         identity = x # note that at this point, x hasn't yet been processed by an activation function.
@@ -85,8 +90,7 @@ class DecoderResidualBlock(nn.Module):
         if self.up_sample:
             out = self.up_output(out)
         out = self.conv2(out)
-        if self.normalize:
-            out = self.bn2(out)
+        out = self.bn2(out)
 
         if self.up_sample:
             identity = self.up_identity(x)
@@ -95,6 +99,24 @@ class DecoderResidualBlock(nn.Module):
         out += identity # identity shortcut connection before feeding to activiation function
 
         return out
+
+class DecoderLastConvBlock(nn.Module):
+    """Residual block with conv + batch normalization + LeakyReLU"""
+    def __init__(self, in_channels, out_channels):
+        super(DecoderLastConvBlock, self).__init__()
+
+        self.act = nn.LeakyReLU(0.2, inplace=False)
+        self.conv1 = conv3x3(in_channels, in_channels)
+        self.bn1 = nn.BatchNorm2d(in_channels, 0.8)
+        self.conv2 = conv3x3(in_channels, out_channels)
+    
+    def forward(self, x):
+        x = self.act(x)
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.act(x)
+        x = self.conv2(x)
+        return x
 
 class ResidualEncoder(nn.Module):
     def __init__(self, in_channels):
@@ -126,7 +148,8 @@ class IntrinsicResidualDecoder(nn.Module):
         self.res3 = DecoderResidualBlock(128, 128) # in 32x32x128 - out 32x32x128
         self.res4 = DecoderResidualBlock(128, 64, up_sample=True) # in 32x32x128 - out 64x64x64
         self.res5 = DecoderResidualBlock(64, 64) # in 64x64x64 - out 64x64x64
-        self.res6 = DecoderResidualBlock(64, out_channels+1, up_sample=False, normalize=False) # in 64x64x64 - out 64x64x(out_channels+1)
+        self.last_conv = DecoderLastConvBlock(64, out_channels+1)
+        # self.res6 = DecoderResidualBlock(64, out_channels+1, up_sample=False, normalize=False) # in 64x64x64 - out 64x64x(out_channels+1)
     
     def forward(self, x):
         x = self.res1(x)
@@ -134,7 +157,7 @@ class IntrinsicResidualDecoder(nn.Module):
         x = self.res3(x)
         x = self.res4(x)
         x = self.res5(x)
-        x = self.res6(x)
+        x = self.last_conv(x)
         out_intrin = torch.sigmoid(x[:,:self.out_channels,:,:].float())
         out_bias = torch.sigmoid(x[:,self.out_channels,:,:].unsqueeze(1).float()) 
 
@@ -147,7 +170,7 @@ class IntrinsicResidualAutoencoder(nn.Module):
         self.out_channels = out_channels
 
         self.encoder = ResidualEncoder(self.in_channels)
-        self.decoder = ResidualDecoder(self.out_channels)
+        self.decoder = IntrinsicResidualDecoder(self.out_channels)
 
     def forward(self, x):
         x = self.encoder(x)

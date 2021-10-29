@@ -46,6 +46,8 @@ path_arg.add_argument('--min_scale', type=float, default=0.85,
 path_arg = parser.add_argument_group('Networks Config')
 path_arg.add_argument('--trained_ckpt_path', type=str, default=None,
     help='Path of trained model checkpoint to be loaded')
+path_arg.add_argument('--trained_intrinsic_ckpt_path', type=str, default=None,
+    help='Path of trained intrinsic decomposition model checkpoint to be loaded')
 path_arg.add_argument('--num_in_channel', type=int, default=3,
     help='Number of channel of input')
 path_arg.add_argument('--num_out_channel', type=int, default=3,

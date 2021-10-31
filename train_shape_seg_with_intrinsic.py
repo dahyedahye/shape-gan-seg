@@ -375,10 +375,7 @@ for epoch in range(num_epoch):
             # -----------------------------------------
             if num_iters_seg == 0 or (num_iters_seg * num_discri) % monitor_interval == 0:
                 # plot images
-                overlapped = torch.zeros(num_plot_img, 3, imgs_seg.size(2), imgs_seg.size(3))
-                overlapped[:,0,:,:] = imgs_gt[:num_plot_img].squeeze(1)
-                overlapped[:,1,:,:] = imgs_seg[:num_plot_img].squeeze(1)
-                
+
                 plot_segmented = imgs_seg.cpu().detach().numpy()
                 plot_gt = imgs_gt.cpu().detach().numpy()
                 plot_input = imgs_input.cpu().detach().numpy()
@@ -514,9 +511,6 @@ for epoch in range(num_epoch):
             #     Plot images to monitor validation
             # -----------------------------------------
             if num_iters_val == 0 or num_iters_val % monitor_interval == 0:
-                print("#-val-# [Epoch %d/%d] [Batch %d/%d] [iou: %f]"
-                    % (epoch+1, num_epoch, i+1, len(loader_val), metric_iou)
-                )
                 print('[*VAL*][Epoch {}/{}] [Batch {}/{}] [IoU: {}]'.format(epoch+1, num_epoch, i+1, len(loader_val), metric_iou))
 
                 # plot metric score curve

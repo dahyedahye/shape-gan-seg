@@ -5,8 +5,7 @@ This repository contains the official PyTorch implementation of:
 **Unsupervised Segmentation incorporating Shape Prior
 via Generative Adversarial Networks**
 
-[paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Kim_Unsupervised_Segmentation_Incorporating_Shape_Prior_via_Generative_Adversarial_Networks_ICCV_2021_paper.pdf) | [project webpage](https://dahyedahye.github.io/shape-gan-seg/)
-
+[paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Kim_Unsupervised_Segmentation_Incorporating_Shape_Prior_via_Generative_Adversarial_Networks_ICCV_2021_paper.pdf) | [project webpage](https://dahyedahye.github.io/shape-gan-seg/) | [supplementary](https://drive.google.com/file/d/1p-Ej0vqYA6hb8ciumQcMosNdW4wkYne6/view?usp=sharing)
 
 ## News
 * Codes for intrinsic decomposition has been uploaded. (29/10/2021)

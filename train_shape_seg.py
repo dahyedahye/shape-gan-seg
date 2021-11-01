@@ -493,9 +493,6 @@ for epoch in range(num_epoch):
             #     Plot images to monitor validation
             # -----------------------------------------
             if num_iters_val == 0 or num_iters_val % monitor_interval == 0:
-                print("#-val-# [Epoch %d/%d] [Batch %d/%d] [iou: %f]"
-                    % (epoch+1, num_epoch, i+1, len(loader_val), metric_iou)
-                )
                 print('[*VAL*][Epoch {}/{}] [Batch {}/{}] [IoU: {}]'.format(epoch+1, num_epoch, i+1, len(loader_val), metric_iou))
 
                 # plot metric score curve

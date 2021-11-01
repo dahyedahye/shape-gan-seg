@@ -38,7 +38,7 @@ $ ./train_shape_seg.sh
   * [LSUN car](https://github.com/dahyedahye/shape-gan-seg/blob/main/pretrained/lsun/shape_seg/lsun_car/trained_model_by_best_val_iou.pth)
 ### Dataset
 **LSUN dataset with pseudo labels for segmentation**
-  * [download link via google drive](https://drive.google.com/file/d/1y_b0DIrECcNTrUgi-YoHyn0901bmyimK/view?usp=sharing)
+  * [download link via google drive](https://drive.google.com/file/d/1y_b0DIrECcNTrUgi-YoHyn0901bmyimK/view?usp=sharing) (file size: 8.75 GB)
   
 ## Update Plan
 1. LSUN dataset with pseudo labels for segmentation (by Nov 2021)

@@ -40,6 +40,7 @@ $ ./train_shape_seg.sh
 ### Dataset
 **LSUN dataset with pseudo labels for segmentation**
   * [download link via google drive](https://drive.google.com/file/d/1y_b0DIrECcNTrUgi-YoHyn0901bmyimK/view?usp=sharing) (file size - compressed/original: 8.75G/30G)
+
 **Shape prior**
   * [download link via google drive](https://drive.google.com/file/d/1kVlhiqyE-GnoZRYDYYkyF8FHcehFUtmG/view?usp=sharing) (file size - compressed/original: 104.9M/9.4G)
   

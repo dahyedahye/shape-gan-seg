@@ -9,8 +9,9 @@ via Generative Adversarial Networks**
 
 
 ## News
-* Codes for intrinsic decomposition has been uploaded. (29.10.2021)
-* Codes to inference segmentation has been uploaded. (31.10.2021)
+* Codes for intrinsic decomposition has been uploaded. (29/10/2021)
+* Codes for segmentation inference has been uploaded. (31/10/2021)
+* Trained models of segmentation with shape incorporation on original LSUN images (airplane, boat, car) have been uploaded. (01/11/2021)
 
 ## Setup
 * The code is tested with Python 3.7-3.8.8 and PyTorch 1.6-1.9.1
@@ -30,7 +31,10 @@ $ ./train_shape_seg.sh
 ### Source code to train intrinsic decomposition (Sec. 3.1. of the paper)
 * The shell script `./scripts/train_intrinsic.sh` contains commands to train the intrinsic decomposition network.
 ### Pretrained models
-* Trained models of segmentation with shape incorporation on original LSUN images (airplane, boat, car) are uploaded [(link)](https://github.com/dahyedahye/shape-gan-seg/tree/main/pretrained/lsun/shape_seg).
+**Segmentation with shape incorporation via GAN on original images**
+  * [LSUN airplane](https://github.com/dahyedahye/shape-gan-seg/blob/main/pretrained/lsun/shape_seg/lsun_airplane/trained_model_by_best_val_iou.pth)
+  * [LSUN boat](https://github.com/dahyedahye/shape-gan-seg/blob/main/pretrained/lsun/shape_seg/lsun_boat/trained_model_by_best_val_iou.pth)
+  * [LSUN car](https://github.com/dahyedahye/shape-gan-seg/blob/main/pretrained/lsun/shape_seg/lsun_car/trained_model_by_best_val_iou.pth)
 
 ## Update Plan
 1. LSUN dataset with pseudo labels for segmentation (by Nov 2021)

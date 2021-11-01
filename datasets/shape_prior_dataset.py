@@ -15,7 +15,6 @@ def npy_loader(path):
 
 class PriorDataset(Dataset):
     """Prior Dataset"""
-#     def __init__(self, root, transform=None):
     def __init__(self, root_dir, transform=None):
         self.root_dir = root_dir
         self.transform = transform
@@ -44,7 +43,6 @@ class PriorDataset(Dataset):
 
 class PriorDatasetSliced(Dataset):
     """Prior Dataset Sliced"""
-#     def __init__(self, root, transform=None):
     def __init__(self, root_dir, num_split, transform=None):
         self.root_dir = root_dir
         self.transform = transform

@@ -29,6 +29,8 @@ $ ./train_shape_seg.sh
 * The shell script `./scripts/inference_shape_seg.sh` contains commands to infer segmentation.
 ### Source code to train intrinsic decomposition (Sec. 3.1. of the paper)
 * The shell script `./scripts/train_intrinsic.sh` contains commands to train the intrinsic decomposition network.
+### Pretrained models
+* Trained models of segmentation with shape incorporation on original LSUN images (airplane, boat, car) are uploaded [(link)](https://github.com/dahyedahye/shape-gan-seg/tree/main/pretrained/lsun/shape_seg).
 
 ## Update Plan
 1. LSUN dataset with pseudo labels for segmentation (by Nov 2021)

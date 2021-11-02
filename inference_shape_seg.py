@@ -163,7 +163,7 @@ for i, data_input in enumerate(loader_test, 0):
 
     imgs_seg = (imgs_seg > t).float() * 1
     imgs_gt = (imgs_gt > t).float() * 1
-    # flatten input and grount truth images
+    # flatten input and ground truth images
     metric_iou = metric_seg.evaluate_iou(imgs_seg, imgs_gt)
 
     # Collect score info

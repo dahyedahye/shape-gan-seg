@@ -1,4 +1,3 @@
-.ipynb_checkpoints
 __pycache__
 .DS_Store
 .vscode/*
@@ -10,3 +9,56 @@ __pycache__
 
 # Local History for Visual Studio Code
 .history/
+
+# jupyter notebook
+.ipynb_checkpoints
+MANIFEST
+build
+dist
+_build
+docs/man/*.gz
+docs/source/api/generated
+docs/source/config.rst
+docs/gh-pages
+notebook/i18n/*/LC_MESSAGES/*.mo
+notebook/i18n/*/LC_MESSAGES/nbjs.json
+notebook/static/components
+notebook/static/style/*.min.css*
+notebook/static/*/js/built/
+notebook/static/*/built/
+notebook/static/built/
+notebook/static/*/js/main.min.js*
+notebook/static/lab/*bundle.js
+node_modules
+*.py[co]
+*.egg-info
+*~
+*.bak
+.tox
+\#*#
+.#*
+.coverage
+.pytest_cache
+src
+
+*.swp
+*.map
+.idea/
+Read the Docs
+config.rst
+*.iml
+/.project
+/.pydevproject
+
+package-lock.json
+geckodriver.log
+*.iml
+
+# jetbrains IDE stuff
+*.iml
+.idea/
+
+# copied changelog
+docs/source/changelog.md
+
+.jupyter_releaser_checkout

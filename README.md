@@ -13,11 +13,14 @@ via Generative Adversarial Networks**
 * Trained models of segmentation with shape incorporation on original LSUN images (airplane, boat, car) have been uploaded. (01/11/2021)
 * LSUN dataset with pseudo labels for segmentation has been shared publicly. (01/11/2021)
 * Shape prior dataset built based on ShapeNet has been shared publicly. (01/11/2021)
+* Demo with LSUN car sample data has been uploaded. (02/11/2021)
 
 ## Setup
 * The code is tested with Python 3.7-3.8.8 and PyTorch 1.6-1.9.1
   
 ## Currently Available
+### Demo
+* [LSUN car sample data](https://github.com/dahyedahye/shape-gan-seg/blob/main/demo_shape_seg.ipynb)
 ### Source code for segmentation with shape incorporation (Sec. 3.2. of the paper)
 **Training**
 * The shell script `./scripts/train_shape_seg.sh` contains commands to train the segmentation network with shape incorporation.
@@ -44,8 +47,7 @@ $ ./train_shape_seg.sh
   * [download link via google drive](https://drive.google.com/file/d/1kVlhiqyE-GnoZRYDYYkyF8FHcehFUtmG/view?usp=sharing) (file size - compressed/original: 104.9M/9.4G)
   
 ## Update Plan
-1. Demo codes (by Nov 2021)
-2. Source code to construct LSUN dataset with pseudo labels for segmentation (byNov 2021)
-3. Source code to create synthetic dataset (by Nov 2021)
-4. Supplementary material with experimental details & network architecture (by Nov 2021)
-5. Pretrained models (by Nov 2021)
+1. Source code to construct LSUN dataset with pseudo labels for segmentation (byNov 2021)
+2. Source code to create synthetic dataset (by Nov 2021)
+3. Supplementary material with experimental details & network architecture (by Nov 2021)
+4. Pretrained models (by Nov 2021)

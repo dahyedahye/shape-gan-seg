@@ -60,7 +60,7 @@ via Generative Adversarial Networks**
   * [download link via google drive](https://drive.google.com/file/d/1kVlhiqyE-GnoZRYDYYkyF8FHcehFUtmG/view?usp=sharing) (file size - compressed/original: 104.9M/9.4G)
   
 ## Update Plan
-1. Source code to construct LSUN dataset with pseudo labels for segmentation (byNov 2021)
+1. Source code to construct LSUN dataset with pseudo labels for segmentation (by Nov 2021)
 2. Source code to create synthetic dataset (by Nov 2021)
 3. Pretrained models for intrinsic decomposition (by Nov 2021)
 4. Source code to train segmentation with shape incorporation using intrinsic representation (by Nov 2021)

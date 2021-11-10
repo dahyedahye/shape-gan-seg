@@ -7,7 +7,7 @@ python ../train_shape_seg.py \
     --segment_data_train_dir='../data/lsun/one_obj_64/car/train' \
     --segment_data_val_dir='../data/lsun/one_obj_64/car/train' \
     --segment_data_test_dir='../data/lsun/one_obj_64/car/test' \
-    --prior_data_dir='../data/shapenet_prior64/car/data' \
+    --prior_data_dir='../data/shape_prior/shapenet_prior64/car/data' \
     --num_train_split=75973 \
     --num_val_split=8441 \
     --min_scale=1.0 \

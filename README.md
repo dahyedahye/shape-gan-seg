@@ -23,32 +23,30 @@ via Generative Adversarial Networks**
   | chair    | 60,606            | 6,734           |
 ### Segmentation with shape incorporation (Sec. 3.2. of the paper)
 **Training**
-* How to run:
-  1. Set the configuration for training in `./scripts/train_shape_seg.sh`.
-  2. Run the following commands:
-     ```bash
-     $ cd ./scripts
-     $ chmod +x train_shape_seg.sh
-     $ ./train_shape_seg.sh
-     ```
+1. Set the configuration for training in `./scripts/train_shape_seg.sh`.
+2. Run the following commands:
+   ```bash
+   $ cd ./scripts
+   $ chmod +x train_shape_seg.sh
+   $ ./train_shape_seg.sh
+   ```
 **Inference**
-* How to run:
-  1. Set the configuration for training in `./scripts/inference_shape_seg.sh`.
-  2. Run the following commands:
-     ```bash
-     $ cd ./scripts
-     $ chmod +x inference_shape_seg.sh
-     $ ./inference_shape_seg.sh
-     ```
+1. Set the configuration for training in `./scripts/inference_shape_seg.sh`.
+2. Run the following commands:
+  ```bash
+  $ cd ./scripts
+  $ chmod +x inference_shape_seg.sh
+  $ ./inference_shape_seg.sh
+  ```
 ### Intrinsic decomposition (Sec. 3.1. of the paper)
-* How to run:
-  1. Set the configuration for training in `./scripts/train_intrinsic.sh`.
-  2. Run the following commands:
-     ```bash
-     $ cd ./scripts
-     $ chmod +x train_intrinsic.sh
-     $ ./train_intrinsic.sh
-     ```
+**Training**
+1. Set the configuration for training in `./scripts/train_intrinsic.sh`.
+2. Run the following commands:
+  ```bash
+  $ cd ./scripts
+  $ chmod +x train_intrinsic.sh
+  $ ./train_intrinsic.sh
+  ```
 ## Pretrained models
 **Segmentation with shape incorporation via GAN on original images**
   * [LSUN airplane](https://github.com/dahyedahye/shape-gan-seg/blob/main/pretrained/lsun/shape_seg/lsun_airplane/trained_model_by_best_val_iou.pth)

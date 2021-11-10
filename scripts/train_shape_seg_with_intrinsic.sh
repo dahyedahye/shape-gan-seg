@@ -1,5 +1,5 @@
-python ../train_shape_seg.py \
-    --output_dir='../output/train/shape_seg' \
+python ../train_shape_seg_with_intrinsic.py \
+    --output_dir='../output/train/shape_seg_with_intrinsic' \
     --monitor_interval=50 \
     --num_plot_img=32 \
     --height=64 \
@@ -12,6 +12,7 @@ python ../train_shape_seg.py \
     --num_val_split=8441 \
     --min_scale=1.0 \
     --trained_ckpt_path=None \
+    --trained_intrinsic_ckpt_path='/nas/users/dahye/mygit/shape-gan-seg/pretrained/intrinsic_lsun/lsun_car_test/trained_model_by_best_val_loss.pth' \
     --num_in_channel=3 \
     --num_out_channel=3 \
     --gamma1_tv_seg=0.01 \
@@ -32,6 +33,6 @@ python ../train_shape_seg.py \
     --beta1_generator=0.5 \
     --num_discri=5 \
     --num_workers=16 \
-    --multi_gpu=False \
-    --num_gpu=1 \
+    --multi_gpu=True \
+    --num_gpu=2 \
     --cuda_id='cuda:0';

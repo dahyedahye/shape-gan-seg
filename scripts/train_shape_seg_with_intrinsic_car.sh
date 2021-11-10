@@ -1,17 +1,18 @@
-python ../train_shape_seg.py \
-    --output_dir='../output/train/shape_seg' \
+python ../train_shape_seg_with_intrinsic.py \
+    --output_dir='/nas/users/dahye/save_pretrained/shape_seg_with_intrinsic/car' \
     --monitor_interval=50 \
     --num_plot_img=32 \
     --height=64 \
     --width=64 \
-    --segment_data_train_dir='../data/lsun/one_obj_64/car/train' \
-    --segment_data_val_dir='../data/lsun/one_obj_64/car/train' \
-    --segment_data_test_dir='../data/lsun/one_obj_64/car/test' \
-    --prior_data_dir='../data/shapenet_prior64/car/data' \
+    --segment_data_train_dir='/nas/users/dahye/dataset/lsun/one_obj_64/car/train' \
+    --segment_data_val_dir='/nas/users/dahye/dataset/lsun/one_obj_64/car/train' \
+    --segment_data_test_dir='/nas/users/dahye/dataset/lsun/one_obj_64/car/test' \
+    --prior_data_dir='/nas/users/dahye/dataset/shapenet/car_64/shapenet_car_closing_64' \
     --num_train_split=75973 \
     --num_val_split=8441 \
     --min_scale=1.0 \
     --trained_ckpt_path=None \
+    --trained_intrinsic_ckpt_path='/nas/users/dahye/save_pretrained/intrinsic_resave/car/trained_intrinsic.pth' \
     --num_in_channel=3 \
     --num_out_channel=3 \
     --gamma1_tv_seg=0.01 \
@@ -32,6 +33,6 @@ python ../train_shape_seg.py \
     --beta1_generator=0.5 \
     --num_discri=5 \
     --num_workers=16 \
-    --multi_gpu=False \
-    --num_gpu=1 \
+    --multi_gpu=True \
+    --num_gpu=2 \
     --cuda_id='cuda:0';

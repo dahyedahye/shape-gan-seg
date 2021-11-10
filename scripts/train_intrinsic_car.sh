@@ -1,12 +1,13 @@
 python ../train_intrinsic.py \
-    --output_dir='../output/train/intrinsic' \
+    --output_dir='../pretrained/intrinsic_lsun/lsun_car' \
     --monitor_interval=50 \
     --num_plot_img=32 \
     --height=64 \
     --width=64 \
-    --segment_data_train_dir='../data/lsun/one_obj_64/car/train' \
-    --segment_data_val_dir='../data/lsun/one_obj_64/car/train' \
-    --segment_data_test_dir='../data/lsun/one_obj_64/car/test' \
+    --segment_data_train_dir='/nas/users/dahye/dataset/lsun/one_obj_64/car/train' \
+    --segment_data_val_dir='/nas/users/dahye/dataset/lsun/one_obj_64/car/train' \
+    --segment_data_test_dir='/nas/users/dahye/dataset/lsun/one_obj_64/car/test' \
+    --prior_data_dir='/nas/users/dahye/dataset/shapenet/car_64/shapenet_car_closing_64' \
     --num_train_split=75973 \
     --num_val_split=8441 \
     --trained_ckpt_path=None \

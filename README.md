@@ -25,11 +25,11 @@ via Generative Adversarial Networks**
 **Training**
 1. Set the configuration for training in `./scripts/train_shape_seg.sh`.
 2. Run the following commands:
-   ```bash
-   $ cd ./scripts
-   $ chmod +x train_shape_seg.sh
-   $ ./train_shape_seg.sh
-   ```
+      ```bash
+      $ cd ./scripts
+      $ chmod +x train_shape_seg.sh
+      $ ./train_shape_seg.sh
+      ```
 **Inference**
 1. Set the configuration for training in `./scripts/inference_shape_seg.sh`.
 2. Run the following commands:

@@ -1,2 +1,0 @@
-*************[Train Epoch Average Best IoU]*************
-best iou : 0.43301614909508557 ([epoch]571)

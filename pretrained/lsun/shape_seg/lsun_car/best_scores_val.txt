@@ -1,2 +1,0 @@
-*************[Val Epoch Average Best IoU]*************
-best iou : 0.6252093117529789 ([epoch]577)

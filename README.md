@@ -33,20 +33,20 @@ via Generative Adversarial Networks**
 **Inference**
 1. Set the configuration for training in `./scripts/inference_shape_seg.sh`.
 2. Run the following commands:
-  ```bash
-  $ cd ./scripts
-  $ chmod +x inference_shape_seg.sh
-  $ ./inference_shape_seg.sh
-  ```
+     ```bash
+     $ cd ./scripts
+     $ chmod +x inference_shape_seg.sh
+     $ ./inference_shape_seg.sh
+     ```
 ### Intrinsic decomposition (Sec. 3.1. of the paper)
 **Training**
 1. Set the configuration for training in `./scripts/train_intrinsic.sh`.
 2. Run the following commands:
-  ```bash
-  $ cd ./scripts
-  $ chmod +x train_intrinsic.sh
-  $ ./train_intrinsic.sh
-  ```
+     ```bash
+     $ cd ./scripts
+     $ chmod +x train_intrinsic.sh
+     $ ./train_intrinsic.sh
+     ```
 ## Pretrained models
 **Segmentation with shape incorporation via GAN on original images**
   * [LSUN airplane](https://github.com/dahyedahye/shape-gan-seg/blob/main/pretrained/lsun/shape_seg/lsun_airplane/trained_model_by_best_val_iou.pth)

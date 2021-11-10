@@ -1,9 +1,9 @@
 python ../inference_shape_seg.py \
-    --output_dir='/nas/users/dahye/save_pretrained/inference/car_shape_seg' \
+    --output_dir='../output/inference/shape_seg' \
     --height=64 \
     --width=64 \
-    --segment_data_test_dir='/nas/users/dahye/dataset/lsun/one_obj_64/car/test' \
-    --trained_ckpt_path='/nas/users/dahye/mygit/shape-gan-seg/pretrained/lsun_car/trained_model_by_best_val_iou.pth' \
+    --segment_data_test_dir='../data/lsun/one_obj_64/car/test' \
+    --trained_ckpt_path='../pretrained/lsun/shape_seg/lsun_car/trained_model_by_best_val_iou.pth' \
     --num_in_channel=3 \
     --num_out_channel=3 \
     --test_batch_size=128 \
